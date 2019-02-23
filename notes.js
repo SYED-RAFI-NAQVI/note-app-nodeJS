@@ -12,7 +12,7 @@ var addNote = (title, body) => {
     var notesString = fs.readFileSync('notes-data.json')
     var notes = JSON.parse(notesString)
   } catch (e) {
-
+    console.log('you got an error')
   }
   var duplicateNotes = notes.filter(note => note.title === title)
   if (duplicateNotes.length === 0) {
