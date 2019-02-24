@@ -38,7 +38,9 @@ var getNote = () => {
 }
 
 var removeNote = () => {
-  console.log('removing')
+  var notes = fetchNotes()
+  var filteredNotes = notes.filter((note) => note.title !== title)
+  savedNotes(filteredNotes)
 }
 
 module.exports = {
